@@ -1,0 +1,21 @@
+{
+    "fpath_hwconfig": "/home/petalinux/bioemum/config/hwconfig_testSyn.txt",
+    "emulation_time_s": 1,
+    "sel_nrn_vmem_dac": [0, 1, 2, 3, 4, 5, 6, 7],
+    "sel_nrn_vmem_dma": [0, 64, 128, 192, 256, 320, 384, 448, 512, 576, 640, 704, 768, 832, 896, 960, 961, 962, 963, 964, 965, 966, 967, 968, 969, 970, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008],
+    "save_local_spikes": false,
+    "save_local_vmem": true,
+    "save_path": "/home/petalinux/bioemum/data/",
+    "en_zmq_spikes": false,
+    "en_zmq_vmem": false,
+    "en_zmq_stim": false,
+    "en_wifi_spikes": false,
+    "ip_zmq_spikes": "tcp://*:5557",
+    "ip_zmq_vmem": "tcp://*:5558",
+    "ip_zmq_stim": "tcp://192.168.137.1:5559",
+    "nb_tstamp_per_spk_transfer": 100,
+    "nb_tstep_per_vmem_transfer": 190,
+    "en_stim": true,
+    "stim_delay_ms": 0,
+    "stim_duration_ms": 2000
+}
