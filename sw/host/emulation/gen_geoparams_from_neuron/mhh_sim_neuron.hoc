@@ -1,0 +1,25 @@
+/***************************************************************************
+ /////////////////////////////////Cell parameters////////////////////////////
+****************************************************************************/
+strdef neuron_name
+neuron_name = "somaFS"
+
+Vrest = -75.0	// mv
+RaSpec = 100	// mho.cm
+RmSpec = 30717.0   // Ohm.cm2   -> R input # 900 MOhm
+
+///////////////////////////////// BUILD MODEL //////////////////////////////
+
+//*************************** NEURONE GEOMETRY ****************************
+create somaFS
+
+//*************************** CONDUCTANCES ****************************    
+somaFS {
+  L       = 70
+  diam    = 9
+  Ra      = RaSpec
+  nseg    = 62
+  insert pas
+    g_pas = 1/RmSpec // ohm/cm2 conductance
+    e_pas = -70  // mV reversal potential (will be modified by seting Vrest)		
+}

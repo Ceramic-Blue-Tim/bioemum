@@ -1,0 +1,7 @@
+all:
+{
+	image
+	{
+		{ type = bootimage, file = @BIT@ }
+	}
+}
