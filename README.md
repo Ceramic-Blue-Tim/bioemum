@@ -36,10 +36,6 @@ _Authors_: Romain Beaubois (refbeaubois@yahoo.com), Jérémy Cheslet (jeremy.che
 ## Repository structure
 
 * **docs** : documentation, figures and changelogs
-* **hw** : hardware sources
-  * **data**: data for simulations
-  * **hls**: HLS synthesis sources and projects
-  * **vivado**: Vivado sources, scripts and projects
 * **sw** : software sources
   * **host**: configuration, emulation and monitoring scripts
   * **target**: C++ application, firmware, drivers and scripts for target
@@ -73,7 +69,7 @@ This project is licensed under GPLv3.
 
 Romain Beaubois, Jérémy Cheslet, Yoshiho Ikeuchi, Pascal Branchereau, Timothée Levi
 
-Frontiers in Neurosciences - <>
+Frontiers in Neurosciences - Oct 2024
 
 doi: <>
 

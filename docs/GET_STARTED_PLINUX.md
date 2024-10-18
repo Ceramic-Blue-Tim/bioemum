@@ -31,7 +31,7 @@ source <plinux_tools_paths>/settings.sh
 ```bash
 # <path_to_bsp>: petalinux bsp downloaded from AMD website
 # <board_id>: board identifier (kr260, vpk120)
-# <path_to_xsa>: path to hardware file
+# <path_to_xsa>: path to hardware file (/sw/plinux/apps/*.xsa)
 petalinux-create -t project -s <path_to_bsp> -n plinux-<board_id>
 cd plinux-<board_id>
 petalinux-config --get-hw-description <path_to_xsa>
@@ -51,7 +51,7 @@ Image Packaging Configuration --> [] Copy final images to tftpboot
 * Add dma proxy driver
 ```bash
 petalinux-create -t modules --name dma-proxy --enable
-cp /sw/linux/drivers/dma_proxy/dma-proxy.c \ 
+cp /sw/plinux/modules/dma_proxy/dma-proxy.c \ 
 /sw/linux/plinux-<board_id>/project-spec/meta-user/recipes-modules/dma-proxy/files/dma-proxy.c
 ```
 
