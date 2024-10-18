@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed 
 -->
 
+## [0.1.1] - 18 Oct 2024
+### Changed
+- Unified makefile app firmware for zynqmp/versal
+- Independent hardware configuration files for for zynqmp/versal
+
+### Fixed
+- Added .xsa to build petalinux boot assets (currently no DFX handling to flash from userspace)
+
 ## [0.1.0] - 01 Oct 2024
 ### Added
 - Initial version released

@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed 
 -->
 
+## [0.1.1] - 18 Oct 2024
+### Changed
+- Export hardware configuration files with folder and file name based on fpga architecture
+
 ## [0.1.0] - 01 Oct 2024
 ### Added
 - Initial version released
