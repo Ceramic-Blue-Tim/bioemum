@@ -47,6 +47,7 @@ int main(int argc, char* argv[])
     cout << string(50, '=') << endl;
     cout << "* " << ITLC("Application: BioemuM") << endl;
     cout << "* " << ITLC("Date: ") << ITLC(__DATE__) << " " << ITLC(__TIME__) << endl;
+    cout << "* " << ITLC("SW version: ") << ITLC(SW_VERSION) << endl;
     cout << "* " << ITLC("HW version: ") << ITLC(HW_VERSION) << endl;
     cout << "* " << ITLC("HW FPGA architecture: ") << ITLC(HW_FPGA_ARCH) << endl;
     cout << string(50, '=') << endl;

@@ -1,0 +1,44 @@
+// *** Generated from: data_coding_pkg.vhd ***
+#ifndef __HW_CONFIG_DATA_CODING_ZYNQMP_H__
+#define __HW_CONFIG_DATA_CODING_ZYNQMP_H__
+
+// Fixed-point coding
+#define SFI_V_IONRATE_INT 8
+#define SFI_V_MONITORING_INT 8
+#define SFI_V_SYN_INT 8
+#define SFI_I_SYN_INT 8
+#define SFI_D_SYN_INT 2
+#define SFI_B_SYN_INT 8
+#define SFI_WSYN_INT 2
+#define SFI_I_NOISE_INT 8
+#define SFI_MU_NOISE_INT 8
+#define SFI_THETA_NOISE_INT 2
+#define SFI_SIGMA_NOISE_INT 2
+#define SFI_PMUL_GSYN_INT 2
+#define SFI_SYNRATE_BV_INT 2
+#define SFI_SYNRATE_TV_INT 2
+#define SFI_SYNRATE_SN_GABAB_IN_INT 4
+#define SFI_SYNRATE_SN_GABAB_OUT_INT 2
+#define SFI_PSYN_K1_INT 4
+#define SFI_PSYN_K2_INT 1
+#define SFI_GSYN_INT 2
+#define SFI_V_IONRATE_DEC 10
+#define SFI_V_MONITORING_DEC 4
+#define SFI_V_SYN_DEC 10
+#define SFI_I_SYN_DEC 10
+#define SFI_D_SYN_DEC 16
+#define SFI_B_SYN_DEC 10
+#define SFI_WSYN_DEC 12
+#define SFI_I_NOISE_DEC 10
+#define SFI_MU_NOISE_DEC 10
+#define SFI_THETA_NOISE_DEC 16
+#define SFI_SIGMA_NOISE_DEC 16
+#define SFI_PMUL_GSYN_DEC 16
+#define SFI_SYNRATE_BV_DEC 10
+#define SFI_SYNRATE_TV_DEC 16
+#define SFI_SYNRATE_SN_GABAB_IN_DEC 14
+#define SFI_SYNRATE_SN_GABAB_OUT_DEC 16
+#define SFI_PSYN_K1_DEC 14
+#define SFI_PSYN_K2_DEC 16
+#define SFI_GSYN_DEC 16
+#endif

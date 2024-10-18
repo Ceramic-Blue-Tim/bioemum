@@ -8,7 +8,7 @@ TAG="[$TAG_COLOR$TAG_NAME$END_COLOR]"
 # Define environment variable for BIOEMUM_PATH if not already set
 if [ -z "$BIOEMUM_PATH" ]; then
     echo -e "$TAG Error: BIOEMUM_PATH is not set"
-    return
+    exit 1
 fi
 
 # Determine target architecture
@@ -29,7 +29,7 @@ build_drivers() {
 
     if [ "$distro" = "Ubuntu" ]; then
         echo -e "$TAG Building drivers for Ubuntu ..."
-        cd "$DRIVERS_DIR/dma_proxy" || return
+        cd "$DRIVERS_DIR/dma_proxy" || exit 1
         make clean
         make
     elif [ "$distro" = "petalinux" ]; then
@@ -43,7 +43,7 @@ build_drivers() {
 build_firmware() {
     ROOTFS_FIRMWARE_VERSAL=false # currently firmware is packaged in rootfs
     echo -e "$TAG Building firmware..."
-    cd "$FIRMWARE_DIR" || return
+    cd "$FIRMWARE_DIR" || exit 1
 
     if [ "$HW_FPGA_ARCH" = "versal" ] && [ "$ROOTFS_FIRMWARE_VERSAL" = false ]; then
         sudo make "ARCH=$HW_FPGA_ARCH"
@@ -57,23 +57,27 @@ build_firmware() {
 # Function to build software
 build_software() {
     echo -e "$TAG Building software..."
-    cd "$SOFTWARE_DIR" || return
+    cd "$SOFTWARE_DIR" || exit 1
     make "ARCH=$HW_FPGA_ARCH"
 }
 
 # Function to clean builds
 clean() {
+    distro=$(lsb_release -i | awk '{print $3}')
+    
     echo -e "$TAG Cleaning builds..."
     echo -e "$TAG Clean application build"
-    cd "$SOFTWARE_DIR" || return
+    cd "$SOFTWARE_DIR" || exit 1
     make "ARCH=$HW_FPGA_ARCH" clean
 
     echo -e "$TAG Clean drivers build"
-    cd "$DRIVERS_DIR/dma_proxy/" || return
-    make clean
+    if [ "$distro" = "Ubuntu" ]; then
+        cd "$DRIVERS_DIR/dma_proxy/" || exit 1
+        make clean
+    fi
 
     echo -e "$TAG Clean firmware build"
-    cd "$FIRMWARE_DIR" || return
+    cd "$FIRMWARE_DIR" || exit 1
     make "ARCH=$HW_FPGA_ARCH" clean 
 
     echo -e "$TAG Clean installed firmware"
@@ -108,7 +112,7 @@ main() {
         *)
             echo -e "$TAG Invalid option: $1"
             echo -e "$TAG Usage: $0 [drivers|firmware|software|all|clean]"
-            return
+            exit 1
             ;;
     esac
 }

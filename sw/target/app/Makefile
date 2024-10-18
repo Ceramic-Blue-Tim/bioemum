@@ -26,9 +26,6 @@ endif
 
 CPPFLAGS ?= $(INC_FLAGS) -MMD -MP -O3 -pthread -lzmq $(ARCH_FLAGS)
 
-# Set the default target if ARCH is not specified
-ARCH ?= all
-
 # Debug
 DEBUG_TARGET_EXEC := debug_$(TARGET_EXEC)
 DEBUG_CPPFLAGS ?= $(CPPFLAGS) -DDEBUG

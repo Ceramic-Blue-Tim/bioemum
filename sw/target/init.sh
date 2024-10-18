@@ -14,7 +14,7 @@ case $1 in
     *)
         echo "Invalid option: $1"
         echo "Usage: $0 [kr260|kv260|vpk120]"
-        return
+        exit 1
         ;;
 esac
 
