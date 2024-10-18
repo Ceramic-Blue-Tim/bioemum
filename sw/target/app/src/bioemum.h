@@ -18,6 +18,7 @@
 #define BIOEMUM_H
 
     /* ############################# Parameters ############################# */
+    #define SW_VERSION "0.1.1"
 
     #if defined(HW_FPGA_ARCH_ZYNQMP)
         #define HW_FPGA_ARCH                "ZynqMP"

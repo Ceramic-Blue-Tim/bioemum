@@ -4,7 +4,7 @@ if [ "$#" -lt 1 ]; then
     echo "       debug_mode: [true|false]"
     echo "       print_swconfig: [true|false]"
     echo "       sweep_progress: [0..100]"
-    return
+    exit 1
 fi
 
 # Check number of arguments

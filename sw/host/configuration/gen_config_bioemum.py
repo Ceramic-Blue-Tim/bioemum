@@ -25,8 +25,8 @@ from configuration.synapses.Synapses import *
 def gen_config_bioemum(config_name:str, save_path:str):
     # System parameters ####################################################################
 
-    # Hardware platform (from KR260 platform)
-    sw_ver              = "0.1.0"
+    # Software environment version
+    sw_ver              = "0.1.1"
     MAX_NB_NRN          = 16
     dt                  = 2**-5 # [ms]
 
